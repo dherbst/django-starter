@@ -6,6 +6,12 @@ services:
       - ./pgdata:/var/lib/postgresql/data/
     environment:
       - POSTGRES_PASSWORD=password
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ./mysqldata:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
   backend:
     build:
       context: ./backend
