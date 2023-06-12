@@ -9,9 +9,9 @@ To use this, first decide if you want to name your application.   If so, you mig
 
 2. You can now start a Django project by running a command to have Django start the project.  In the example below, the project is named `myapp`.
 
-    docker-compose run backend python /app/backend/manage.py startproject myapp
+    docker-compose run backend django-admin startproject myapp
 
-3. In the `myapp/myapp/settings.py` file, replace or modify the `DATABASES` section to connect to postgres.
+3. In the `myapp/myapp/settings.py` file, replace or modify the `DATABASES` section to connect to postgres (or mysql if you prefer).
 
     DATABASES = {
         'default': {
